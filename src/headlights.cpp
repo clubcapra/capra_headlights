@@ -29,7 +29,7 @@ bool toggleHL(std_srvs::Trigger::Request &req, std_srvs::Trigger::Response &res)
 void initializeGPIO() {
     gpioExport(HL_PIN);
     gpioSetDirection(HL_PIN, 1);
-    gpioSetValue(HL_PIN, 1);
+    gpioSetValue(HL_PIN, 0);
 }
 
 int main(int argc, char **argv) {
