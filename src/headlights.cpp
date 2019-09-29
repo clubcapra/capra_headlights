@@ -3,7 +3,7 @@
 #include "jetsonGPIO/jetsonGPIO.c"
 
 bool hl_value = true; //default value for the headlights.
-const jetsonTX2GPIONumber HL_PIN = jetsonTX2GPIONumber::gpio389; //GPIO pin for the pin 25 on the J1 GPIO header
+const jetsonTX2GPIONumber HL_PIN = jetsonTX2GPIONumber::gpio298; //GPIO pin for the pin 25 on the J1 GPIO header
 
 /**
  * Call back function for to toggle the Headlight pin. This will change the electric output on the pin and enable or disable
