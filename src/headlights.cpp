@@ -1,9 +1,9 @@
 #include "ros/ros.h"
 #include "std_srvs/Trigger.h"
-#include "jetsonGPIO/jetsonGPIO.c"
+#include "JetsonXavierGPIO/jetsonGPIO.c"
 
 bool hl_value = true; //default value for the headlights.
-const jetsonTX2GPIONumber HL_PIN = jetsonTX2GPIONumber::gpio298; //GPIO pin for the pin 25 on the J1 GPIO header
+const jetsonXavierGPIONumber HL_PIN = jetsonXavierGPIONumber::gpio422; //GPIO pin for the pin 7 on the J1 GPIO header
 
 /**
  * Call back function for to toggle the Headlight pin. This will change the electric output on the pin and enable or disable

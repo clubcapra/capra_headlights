@@ -15,7 +15,7 @@ catkin_package(
 )
 
 
-add_library(jetsonGPIO_headlights include/jetsonGPIO/jetsonGPIO.c include/jetsonGPIO/jetsonGPIO.h)
+add_library(jetsonGPIO_headlights include/JetsonXavierGPIO/jetsonGPIO.c include/JetsonXavierGPIO/jetsonGPIO.h)
 
 include_directories(
         include
@@ -32,6 +32,6 @@ add_dependencies(headlights
         ${catkin_EXPORTED_TARGETS}
         )
 
-target_include_directories(headlights PRIVATE jetsonGPIO)
+target_include_directories(headlights PRIVATE JetsonXavierGPIO)
 
 target_link_libraries(headlights ${catkin_LIBRARIES})
