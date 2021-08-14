@@ -20,6 +20,7 @@ int gpioExport ( jetsonGPIO gpio )
     char commandBuffer[MAX_BUF];
 
     fileDescriptor = open(SYSFS_GPIO_DIR "/export", O_WRONLY);
+    printf("filedescriptor %d ", fileDescriptor);
     if (fileDescriptor < 0) {
         char errorBuffer[128] ;
         snprintf(errorBuffer,sizeof(errorBuffer), "gpioExport unable to open gpio%d",gpio) ;
@@ -27,6 +28,7 @@ int gpioExport ( jetsonGPIO gpio )
         return fileDescriptor;
     }
 
+    //transfer gpio number to %d format and set it to commandBuffer
     length = snprintf(commandBuffer, sizeof(commandBuffer), "%d", gpio);
     if (write(fileDescriptor, commandBuffer, length) != length) {
         perror("gpioExport");

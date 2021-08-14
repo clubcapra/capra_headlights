@@ -27,7 +27,7 @@ To the if the service is started you can use the `rosservice` tool to call
 the service and see if there's a response. The command is this :
 <br/>
 <br/>
-`rosservice call /capra_headlights`
+`rosservice call /capra/headlights`
 ## Troubleshooting
 If you're having issue with this package there might be two cause.
 1. The GPIO pins are having permissions issues. There's a script at this
